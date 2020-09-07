@@ -8,20 +8,40 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+
+		<style>
+			#agenda {
+				list-style-type: none;
+				display: flex;;
+			}
+
+			#agenda {
+				margin: 0;
+				gap: 1em;
+			}
+
+			#agenda > li {
+				font-weight: bold;
+			}
+
+			#agenda > li ul {
+				font-weight: normal;
+			}
+		</style>
 
 		<!-- Theme used for syntax highlighted code -->
 		<!-- <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme"> -->
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>
+			<div class="slides" >
+				<section data-background-image="./img/footer.svg" data-background-position="bottom left" data-background-size="auto 56px" >
 					<h1>The Sport of Touch</h1>
 				</section>
 				<section>
 					<h1>Content</h1>
-					<ul>
+					<ul id="agenda">
 						<li>Introduction</li>
 						<li>
 							What is Touch?
@@ -36,7 +56,7 @@
 							<ul>
 								<li>Playing</li>
 								<li>Junior Touch</li>
-								<li>International Pathways</li>
+								<li>International</li>
 							</ul>
 						</li>
 						<li>Touch & TISSA</li>
@@ -151,6 +171,9 @@
 			Reveal.initialize({
 				hash: true,
 				navigationMode: 'linear',
+				margin: 0.1,
+				width:1280,
+				height: 930,
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealNotes ]
 			});
